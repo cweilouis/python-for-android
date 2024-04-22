@@ -201,6 +201,8 @@ public class PythonActivity extends SDLActivity {
                 // actually run, ensure that it gets launched if we're active:
                 mActivity.resumeNativeThread();
             }
+
+            finish();
         }
 
         @Override

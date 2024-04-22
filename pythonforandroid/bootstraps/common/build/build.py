@@ -489,6 +489,11 @@ main.py that loads it.''')
             service_id=sid + 1,
             base_service_class=base_service_class,
         )
+        #
+        shutil.copyfile(
+            os.path.abspath('/usr/Envs/icasa_power_server/MyBroadcastReceiver.java'),
+            'src/main/java/{}/{}.java'.format(args.package.replace(".", "/"), 'MyBroadcastReceiver')
+        )
 
     # Find the SDK directory and target API
     with open('project.properties', 'r') as fileh:

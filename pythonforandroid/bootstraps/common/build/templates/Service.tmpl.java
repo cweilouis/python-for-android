@@ -1,5 +1,6 @@
 package {{ args.package }};
 
+import android.os.Build;
 import android.content.Intent;
 import android.content.Context;
 import {{ args.service_class_name }};
@@ -23,7 +24,12 @@ public class Service{{ name|capitalize }} extends {{ base_service_class }} {
                              String pythonServiceArgument) {
         Intent intent = getDefaultIntent(ctx, smallIconName, contentTitle,
 					 contentText, pythonServiceArgument);
-        ctx.startService(intent);
+//         ctx.startService(intent);
+        if (Build.VERSION.SDK_INT >= 26) {//Android8.0
+        	   ctx.startForegroundService(intent);
+        } else {
+             ctx.startService(intent);
+        }
     }
 
     static public void start(Context ctx, String pythonServiceArgument) {

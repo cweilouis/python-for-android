@@ -38,7 +38,7 @@ public class PythonService extends Service implements Runnable {
     public static PythonService mService = null;
     private Intent startIntent = null;
 
-    private boolean autoRestartService = false;
+    private boolean autoRestartService = true;
 
     public void setAutoRestartService(boolean restart) {
         autoRestartService = restart;
