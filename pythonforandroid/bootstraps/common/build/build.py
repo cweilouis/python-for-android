@@ -386,10 +386,10 @@ main.py that loads it.''')
                 remove(lottie_splashscreen)
                 remove(join(res_dir, 'layout/lottie.xml'))
 
-            shutil.copy(
-                args.presplash or default_presplash,
-                join(res_dir, 'drawable/presplash.jpg')
-            )
+            # shutil.copy(
+            #     args.presplash or default_presplash,
+            #     join(res_dir, 'drawable/presplash.jpg')
+            # )
 
     # If extra Java jars were requested, copy them into the libs directory
     jars = []
