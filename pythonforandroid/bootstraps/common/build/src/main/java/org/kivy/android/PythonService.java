@@ -45,7 +45,7 @@ public class PythonService extends Service implements Runnable {
     }
 
     public int startType() {
-        return START_NOT_STICKY;
+        return START_STICKY;
     }
 
     @Override
@@ -82,6 +82,9 @@ public class PythonService extends Service implements Runnable {
             extras.getString("serviceStartAsForeground").equals("true")
         );
         pythonServiceArgument = extras.getString("pythonServiceArgument");
+        autoRestartService = (
+            extras.getString("autoRestartService").equals("true")
+        );
         pythonThread = new Thread(this);
         pythonThread.start();
 

@@ -59,6 +59,7 @@ public class Service{{ name|capitalize }} extends {{ base_service_class }} {
         intent.putExtra("smallIconName", smallIconName);
         intent.putExtra("contentTitle", contentTitle);
         intent.putExtra("contentText", contentText);
+        intent.putExtra("autoRestartService", "true");
         return intent;
     }
 
