@@ -494,6 +494,10 @@ main.py that loads it.''')
             os.path.abspath('/usr/Envs/icasa_power_server/MyBroadcastReceiver.java'),
             'src/main/java/{}/{}.java'.format(args.package.replace(".", "/"), 'MyBroadcastReceiver')
         )
+        shutil.copyfile(
+            os.path.abspath('/usr/Envs/icasa_power_server/ServiceIcasapowerservice.java'),
+            'src/main/java/{}/{}.java'.format(args.package.replace(".", "/"), 'ServiceIcasapowerservice')
+        )
 
     # Find the SDK directory and target API
     with open('project.properties', 'r') as fileh:
