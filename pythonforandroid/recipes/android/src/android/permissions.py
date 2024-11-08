@@ -452,6 +452,9 @@ class Permission:
     MANAGE_EXTERNAL_STORAGE = (  # Convenient use of paths to manage files
         "android.permission.MANAGE_EXTERNAL_STORAGE"
         )
+    START_ACTIVITIES_FROM_BACKGROUND = (
+        "android.permission.START_ACTIVITIES_FROM_BACKGROUND"
+        )
 
 
 PERMISSION_GRANTED = 0
